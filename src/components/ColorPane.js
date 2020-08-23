@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 
 class ColorPane extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      red: this.props.red,
-      green: this.props.green,
-      blue: this.props.blue
-    };
-  }
-
   computeColorCode(red, green, blue) {
     let redCode = (red < 16 ? "0" : "") + red.toString(16);
     let greenCode = (green < 16 ? "0" : "") + green.toString(16);
@@ -19,11 +10,10 @@ class ColorPane extends Component {
 
   render() {
     const color = this.computeColorCode(
-      this.state.red,
-      this.state.green,
-      this.state.blue
+      this.props.red,
+      this.props.green,
+      this.props.blue
     );
-    console.log(color);
     return (
       <div
         style={{ backgroundColor: color, height: "200px", width: "200px" }}
