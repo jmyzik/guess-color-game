@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ColorPane from "./ColorPane";
 import SetColorModule from "./SetColorModule";
+import Results from "./Results";
 
 class Game extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class Game extends Component {
       userBlue: 0
     };
 
-    this.displayResult = this.displayResult.bind(this);
     this.onNumberChange = this.onNumberChange.bind(this);
   }
 
@@ -30,8 +30,6 @@ class Game extends Component {
     let userColor = "user" + color.charAt(0).toUpperCase() + color.slice(1);
     this.setState({ [userColor]: value });
   }
-
-  displayResult() {}
 
   render() {
     return (
@@ -49,9 +47,14 @@ class Game extends Component {
           blue={this.state.userBlue}
           onNumberChange={this.onNumberChange}
         />
-        <button type="button" onClick={this.displayResult}>
-          Check the answer
-        </button>
+        <Results
+          randomRed={this.state.randomRed}
+          randomGreen={this.state.randomGreen}
+          randomBlue={this.state.randomBlue}
+          userRed={this.state.userRed}
+          userGreen={this.state.userGreen}
+          userBlue={this.state.userBlue}
+        />
       </div>
     );
   }
