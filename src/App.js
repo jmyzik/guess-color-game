@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import SetColorModule from "./components/SetColorModule";
+import Game from "./components/Game";
 
 function App() {
   return (
     <div className="App">
-      <SetColorModule />
+      <Game />
     </div>
   );
 }
