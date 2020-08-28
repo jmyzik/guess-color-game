@@ -7,33 +7,47 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      randomColor: {
-        red: Math.floor(Math.random() * 256),
-        green: Math.floor(Math.random() * 256),
-        blue: Math.floor(Math.random() * 256)
-      },
+      randomColor: this.getRandomColor(),
       userColor: {
         red: 0,
         green: 0,
         blue: 0
-      }
+      },
+      hideResults: true
     };
 
     this.onNumberChange = this.onNumberChange.bind(this);
+    this.showResults = this.showResults.bind(this);
   }
 
-  // startNewGame() {
-  //   this.setState({
-  //     randomRed: Math.floor(Math.random() * 256),
-  //     randomGreen: Math.floor(Math.random() * 256),
-  //     randomBlue: Math.floor(Math.random() * 256)
-  //   });
-  // }
+  getRandomColor() {
+    return {
+      red: Math.floor(Math.random() * 256),
+      green: Math.floor(Math.random() * 256),
+      blue: Math.floor(Math.random() * 256)
+    };
+  }
+
+  startNewGame() {
+    this.setState({
+      randomColor: this.getRandomColor(),
+      userColor: {
+        red: 0,
+        green: 0,
+        blue: 0
+      },
+      hideResults: true
+    });
+  }
 
   onNumberChange(color, value) {
     let userColor = this.state.userColor;
     userColor[color] = value;
     this.setState({ userColor: userColor });
+  }
+
+  showResults() {
+    this.setState({ hideResults: false });
   }
 
   render() {
@@ -49,7 +63,12 @@ class Game extends Component {
         <Results
           randomColor={this.state.randomColor}
           userColor={this.state.userColor}
+          hidden={this.state.hideResults}
+          onButtonClick={this.showResults}
         />
+        <button type="button" onClick={this.startNewGame.bind(this)}>
+          New Game
+        </button>
       </div>
     );
   }

@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 
 class Results extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { hidden: true };
-  }
-
-  showResults() {
-    this.setState({ hidden: false });
-  }
-
   render() {
     let randomRed = this.props.randomColor.red;
     let randomGreen = this.props.randomColor.green;
@@ -24,11 +14,11 @@ class Results extends Component {
 
     return (
       <>
-        <button type="button" onClick={this.showResults.bind(this)}>
+        <button type="button" onClick={this.props.onButtonClick}>
           Display results
         </button>
         <br />
-        <table hidden={this.state.hidden}>
+        <table hidden={this.props.hidden}>
           <thead>
             <tr>
               <th></th>
