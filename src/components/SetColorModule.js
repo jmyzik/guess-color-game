@@ -13,17 +13,13 @@ class SetColorModule extends Component {
   render() {
     return (
       <>
-        <ColorPane
-          red={this.props.red}
-          green={this.props.green}
-          blue={this.props.blue}
-        />
+        <ColorPane color={this.props.color} />
         <form>
           <label htmlFor="red">R: </label>
           <input
             type="number"
             name="red"
-            value={this.props.red}
+            value={this.props.color.red}
             min={0}
             max={255}
             onChange={this.handleNumberChange}
@@ -33,7 +29,7 @@ class SetColorModule extends Component {
           <input
             type="number"
             name="green"
-            value={this.props.green}
+            value={this.props.color.green}
             min={0}
             max={255}
             onChange={this.handleNumberChange}
@@ -43,7 +39,7 @@ class SetColorModule extends Component {
           <input
             type="number"
             name="blue"
-            value={this.props.blue}
+            value={this.props.color.blue}
             min={0}
             max={255}
             onChange={this.handleNumberChange}

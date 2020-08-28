@@ -2,12 +2,12 @@ import React, { Component } from "react";
 
 class Results extends Component {
   render() {
-    let randomRed = this.props.randomRed;
-    let randomGreen = this.props.randomGreen;
-    let randomBlue = this.props.randomBlue;
-    let userRed = this.props.userRed;
-    let userGreen = this.props.userGreen;
-    let userBlue = this.props.userBlue;
+    let randomRed = this.props.randomColor.red;
+    let randomGreen = this.props.randomColor.green;
+    let randomBlue = this.props.randomColor.blue;
+    let userRed = this.props.userColor.red;
+    let userGreen = this.props.userColor.green;
+    let userBlue = this.props.userColor.blue;
     let redDiff = Math.abs(randomRed - userRed);
     let greenDiff = Math.abs(randomGreen - userGreen);
     let blueDiff = Math.abs(randomBlue - userBlue);

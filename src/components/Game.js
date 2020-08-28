@@ -7,53 +7,48 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      randomRed: Math.floor(Math.random() * 256),
-      randomGreen: Math.floor(Math.random() * 256),
-      randomBlue: Math.floor(Math.random() * 256),
-      userRed: 0,
-      userGreen: 0,
-      userBlue: 0
+      randomColor: {
+        red: Math.floor(Math.random() * 256),
+        green: Math.floor(Math.random() * 256),
+        blue: Math.floor(Math.random() * 256)
+      },
+      userColor: {
+        red: 0,
+        green: 0,
+        blue: 0
+      }
     };
 
     this.onNumberChange = this.onNumberChange.bind(this);
   }
 
-  startNewGame() {
-    this.setState({
-      randomRed: Math.floor(Math.random() * 256),
-      randomGreen: Math.floor(Math.random() * 256),
-      randomBlue: Math.floor(Math.random() * 256)
-    });
-  }
+  // startNewGame() {
+  //   this.setState({
+  //     randomRed: Math.floor(Math.random() * 256),
+  //     randomGreen: Math.floor(Math.random() * 256),
+  //     randomBlue: Math.floor(Math.random() * 256)
+  //   });
+  // }
 
   onNumberChange(color, value) {
-    let userColor = "user" + color.charAt(0).toUpperCase() + color.slice(1);
-    this.setState({ [userColor]: value });
+    let userColor = this.state.userColor;
+    userColor[color] = value;
+    this.setState({ userColor: userColor });
   }
 
   render() {
     return (
       <div>
         <h3>Guess the color:</h3>
-        <ColorPane
-          red={this.state.randomRed}
-          green={this.state.randomGreen}
-          blue={this.state.randomBlue}
-        />
+        <ColorPane color={this.state.randomColor} />
         <h3>Try it yourself:</h3>
         <SetColorModule
-          red={this.state.userRed}
-          green={this.state.userGreen}
-          blue={this.state.userBlue}
+          color={this.state.userColor}
           onNumberChange={this.onNumberChange}
         />
         <Results
-          randomRed={this.state.randomRed}
-          randomGreen={this.state.randomGreen}
-          randomBlue={this.state.randomBlue}
-          userRed={this.state.userRed}
-          userGreen={this.state.userGreen}
-          userBlue={this.state.userBlue}
+          randomColor={this.state.randomColor}
+          userColor={this.state.userColor}
         />
       </div>
     );

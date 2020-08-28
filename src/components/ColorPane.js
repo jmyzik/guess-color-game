@@ -10,9 +10,9 @@ class ColorPane extends Component {
 
   render() {
     const color = this.computeColorCode(
-      this.props.red,
-      this.props.green,
-      this.props.blue
+      this.props.color.red,
+      this.props.color.green,
+      this.props.color.blue
     );
     return (
       <div
