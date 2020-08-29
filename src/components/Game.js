@@ -52,22 +52,20 @@ class Game extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container p-3 my-3 border">
         <div className="row">
-          <div className="col-sm">
-            <h3>Guess the color:</h3>
+          <div className="col-sm-3">
+            <h4>Guess the color:</h4>
             <ColorPane color={this.state.randomColor} />
           </div>
-          <div className="col-sm">
-            <h3>Try it yourself:</h3>
+          <div className="col-sm-3">
+            <h4>Try it yourself:</h4>
             <SetColorModule
               color={this.state.userColor}
               onNumberChange={this.onNumberChange}
             />
           </div>
-        </div>
-        <div className="row">
-          <div className="col-sm">
+          <div className="col-sm-4">
             <Results
               randomColor={this.state.randomColor}
               userColor={this.state.userColor}
@@ -77,8 +75,12 @@ class Game extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm">
-            <button type="button" onClick={this.startNewGame.bind(this)}>
+          <div className="col-sm-8 text-center">
+            <button
+              className="btn btn-primary btn-lg btn-block"
+              type="button"
+              onClick={this.startNewGame.bind(this)}
+            >
               New Game
             </button>
           </div>

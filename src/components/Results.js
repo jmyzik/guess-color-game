@@ -14,12 +14,16 @@ class Results extends Component {
 
     return (
       <>
-        <button type="button" onClick={this.props.onButtonClick}>
-          Display results
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={this.props.onButtonClick}
+        >
+          Display Results
         </button>
         <br />
-        <table hidden={this.props.hidden}>
-          <thead>
+        <table className="table table-sm" hidden={this.props.hidden}>
+          <thead className="thead-light">
             <tr>
               <th></th>
               <th>Our color</th>
