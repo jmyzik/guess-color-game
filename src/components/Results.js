@@ -18,6 +18,7 @@ class Results extends Component {
           type="button"
           className="btn btn-primary"
           onClick={this.props.onButtonClick}
+          hidden={!this.props.hidden}
         >
           Display Results
         </button>
