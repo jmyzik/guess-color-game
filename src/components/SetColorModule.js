@@ -14,36 +14,49 @@ class SetColorModule extends Component {
     return (
       <>
         <ColorPane color={this.props.color} />
-        <form>
-          <label htmlFor="red">R: </label>
-          <input
-            type="number"
-            name="red"
-            value={this.props.color.red}
-            min={0}
-            max={255}
-            onChange={this.handleNumberChange}
-          />
-          <br />
-          <label htmlFor="green">G: </label>
-          <input
-            type="number"
-            name="green"
-            value={this.props.color.green}
-            min={0}
-            max={255}
-            onChange={this.handleNumberChange}
-          />
-          <br />
-          <label htmlFor="blue">B: </label>
-          <input
-            type="number"
-            name="blue"
-            value={this.props.color.blue}
-            min={0}
-            max={255}
-            onChange={this.handleNumberChange}
-          />
+        <form style={{ width: "150px" }}>
+          <div className="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Red:</span>
+            </div>{" "}
+            <input
+              type="number"
+              className="form-control"
+              name="red"
+              value={this.props.color.red}
+              min={0}
+              max={255}
+              onChange={this.handleNumberChange}
+            />
+          </div>
+          <div className="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Green:</span>
+            </div>{" "}
+            <input
+              type="number"
+              className="form-control"
+              name="green"
+              value={this.props.color.green}
+              min={0}
+              max={255}
+              onChange={this.handleNumberChange}
+            />
+          </div>
+          <div className="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Blue:</span>
+            </div>{" "}
+            <input
+              type="number"
+              className="form-control"
+              name="blue"
+              value={this.props.color.blue}
+              min={0}
+              max={255}
+              onChange={this.handleNumberChange}
+            />
+          </div>
         </form>
       </>
     );

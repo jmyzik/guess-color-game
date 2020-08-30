@@ -16,7 +16,7 @@ class ColorPane extends Component {
     );
     return (
       <div
-        className="rounded"
+        className="rounded mb-3"
         style={{ backgroundColor: color, height: "200px" }}
       ></div>
     );
