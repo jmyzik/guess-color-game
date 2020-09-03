@@ -13,7 +13,7 @@ class Game extends Component {
         green: 0,
         blue: 0
       },
-      hideResults: true
+      playMode: true
     };
 
     this.onNumberChange = this.onNumberChange.bind(this);
@@ -36,7 +36,7 @@ class Game extends Component {
         green: 0,
         blue: 0
       },
-      hideResults: true
+      playMode: true
     });
   }
 
@@ -47,7 +47,7 @@ class Game extends Component {
   }
 
   showResults() {
-    this.setState({ hideResults: false });
+    this.setState({ playMode: false });
   }
 
   render() {
@@ -55,13 +55,14 @@ class Game extends Component {
       <div className="container p-3 my-3 border" style={{ maxWidth: "600px" }}>
         <div className="row">
           <div className="col-sm-6">
-            <h4 className="text-center">Random color</h4>
+            <h4 className="text-center">Here's a random color</h4>
             <ColorPane color={this.state.randomColor} />
           </div>
           <div className="col-sm-6">
             <h4 className="text-center">Can you match it?</h4>
             <SetColorModule
               color={this.state.userColor}
+              disabled={!this.state.playMode}
               onNumberChange={this.onNumberChange}
             />
           </div>
@@ -73,7 +74,7 @@ class Game extends Component {
             <Results
               randomColor={this.state.randomColor}
               userColor={this.state.userColor}
-              hidden={this.state.hideResults}
+              hidden={this.state.playMode}
               onButtonClick={this.showResults}
             />
           </div>

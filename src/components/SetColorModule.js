@@ -26,6 +26,7 @@ class SetColorModule extends Component {
               value={this.props.color.red}
               min={0}
               max={255}
+              disabled={this.props.disabled}
               onChange={this.handleNumberChange}
             />
           </div>
@@ -40,6 +41,7 @@ class SetColorModule extends Component {
               value={this.props.color.green}
               min={0}
               max={255}
+              disabled={this.props.disabled}
               onChange={this.handleNumberChange}
             />
           </div>
@@ -54,6 +56,7 @@ class SetColorModule extends Component {
               value={this.props.color.blue}
               min={0}
               max={255}
+              disabled={this.props.disabled}
               onChange={this.handleNumberChange}
             />
           </div>
