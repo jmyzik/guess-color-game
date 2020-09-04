@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/guess-color-name/static/css/main.36497136.chunk.css",
-    "main.js": "/guess-color-name/static/js/main.c7a380f0.chunk.js",
-    "main.js.map": "/guess-color-name/static/js/main.c7a380f0.chunk.js.map",
-    "runtime-main.js": "/guess-color-name/static/js/runtime-main.d2e82806.js",
-    "runtime-main.js.map": "/guess-color-name/static/js/runtime-main.d2e82806.js.map",
-    "static/js/2.d0fd6ea0.chunk.js": "/guess-color-name/static/js/2.d0fd6ea0.chunk.js",
-    "static/js/2.d0fd6ea0.chunk.js.map": "/guess-color-name/static/js/2.d0fd6ea0.chunk.js.map",
-    "index.html": "/guess-color-name/index.html",
-    "precache-manifest.6eaf6ee5b8d2f331eb95019f29470dc8.js": "/guess-color-name/precache-manifest.6eaf6ee5b8d2f331eb95019f29470dc8.js",
-    "service-worker.js": "/guess-color-name/service-worker.js",
-    "static/css/main.36497136.chunk.css.map": "/guess-color-name/static/css/main.36497136.chunk.css.map",
-    "static/js/2.d0fd6ea0.chunk.js.LICENSE.txt": "/guess-color-name/static/js/2.d0fd6ea0.chunk.js.LICENSE.txt"
+    "main.css": "/guess-color-game/static/css/main.36497136.chunk.css",
+    "main.js": "/guess-color-game/static/js/main.6bbd512b.chunk.js",
+    "main.js.map": "/guess-color-game/static/js/main.6bbd512b.chunk.js.map",
+    "runtime-main.js": "/guess-color-game/static/js/runtime-main.189c4d20.js",
+    "runtime-main.js.map": "/guess-color-game/static/js/runtime-main.189c4d20.js.map",
+    "static/js/2.d0fd6ea0.chunk.js": "/guess-color-game/static/js/2.d0fd6ea0.chunk.js",
+    "static/js/2.d0fd6ea0.chunk.js.map": "/guess-color-game/static/js/2.d0fd6ea0.chunk.js.map",
+    "index.html": "/guess-color-game/index.html",
+    "precache-manifest.9e97f265d3800d587e36c74159426d34.js": "/guess-color-game/precache-manifest.9e97f265d3800d587e36c74159426d34.js",
+    "service-worker.js": "/guess-color-game/service-worker.js",
+    "static/css/main.36497136.chunk.css.map": "/guess-color-game/static/css/main.36497136.chunk.css.map",
+    "static/js/2.d0fd6ea0.chunk.js.LICENSE.txt": "/guess-color-game/static/js/2.d0fd6ea0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2e82806.js",
+    "static/js/runtime-main.189c4d20.js",
     "static/js/2.d0fd6ea0.chunk.js",
     "static/css/main.36497136.chunk.css",
-    "static/js/main.c7a380f0.chunk.js"
+    "static/js/main.6bbd512b.chunk.js"
   ]
 }
