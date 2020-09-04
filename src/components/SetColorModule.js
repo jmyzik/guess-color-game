@@ -18,14 +18,12 @@ class SetColorModule extends Component {
           <div className="input-group mb-3">
             <div className="input-group-prepend">
               <span className="input-group-text">Red:</span>
-            </div>{" "}
+            </div>
             <input
               type="number"
               className="form-control"
               name="red"
               value={this.props.color.red}
-              min={0}
-              max={255}
               disabled={this.props.disabled}
               onChange={this.handleNumberChange}
             />
@@ -33,14 +31,12 @@ class SetColorModule extends Component {
           <div className="input-group mb-3">
             <div className="input-group-prepend">
               <span className="input-group-text">Green:</span>
-            </div>{" "}
+            </div>
             <input
               type="number"
               className="form-control"
               name="green"
               value={this.props.color.green}
-              min={0}
-              max={255}
               disabled={this.props.disabled}
               onChange={this.handleNumberChange}
             />
@@ -48,14 +44,12 @@ class SetColorModule extends Component {
           <div className="input-group mb-3">
             <div className="input-group-prepend">
               <span className="input-group-text">Blue:</span>
-            </div>{" "}
+            </div>
             <input
               type="number"
               className="form-control"
               name="blue"
               value={this.props.color.blue}
-              min={0}
-              max={255}
               disabled={this.props.disabled}
               onChange={this.handleNumberChange}
             />

@@ -12,16 +12,15 @@ class Results extends Component {
     let greenDiff = Math.abs(randomGreen - userGreen);
     let blueDiff = Math.abs(randomBlue - userBlue);
     let result = redDiff + greenDiff + blueDiff;
-
     let resultText = "";
 
     if (result === 0) {
       resultText = "Unbelievable! You've hit it absolutely spot on!";
-    } else if (result > 0 && result <= 10) {
+    } else if (result > 0 && result <= 15) {
       resultText = "Amazing! You were very, very close this time!";
-    } else if (result > 10 && result <= 40) {
+    } else if (result > 15 && result <= 50) {
       resultText = "Good job! That was pretty close!";
-    } else if (result > 40 && result <= 100) {
+    } else if (result > 50 && result <= 120) {
       resultText =
         "Well, that's not exatly it, but you've got the right idea...";
     } else {
@@ -85,7 +84,7 @@ class Results extends Component {
                   <strong>Total:</strong>
                 </td>
                 <td>
-                  <strong>{redDiff + greenDiff + blueDiff}</strong>
+                  <strong>{result}</strong>
                 </td>
               </tr>
             </tfoot>
