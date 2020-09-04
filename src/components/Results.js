@@ -5,9 +5,9 @@ class Results extends Component {
     let randomRed = this.props.randomColor.red;
     let randomGreen = this.props.randomColor.green;
     let randomBlue = this.props.randomColor.blue;
-    let userRed = this.props.userColor.red;
-    let userGreen = this.props.userColor.green;
-    let userBlue = this.props.userColor.blue;
+    let userRed = Number(this.props.userColor.red);
+    let userGreen = Number(this.props.userColor.green);
+    let userBlue = Number(this.props.userColor.blue);
     let redDiff = Math.abs(randomRed - userRed);
     let greenDiff = Math.abs(randomGreen - userGreen);
     let blueDiff = Math.abs(randomBlue - userBlue);
