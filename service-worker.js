@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/guess-color-game/precache-manifest.9e97f265d3800d587e36c74159426d34.js"
+  "/guess-color-game/precache-manifest.2981f3cd5e585f54e3c9a2349d3727cc.js"
 );
 
 self.addEventListener('message', (event) => {
